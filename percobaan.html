@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- <script src="asset/js/script.js"></script> -->
+  </head>
+  <body>
+
+    <section class="container wrap-calculator">
+      <div class="header">
+        <h1 class="text-center text-white mb-3">Calculator</h1>
+      </div>
+
+      <form name="calculator" class=" bg-warning text-center p-1">
+        
+        <table class="operator text-center bg-primary">
+          <tr>
+            <td colspan="3">
+              <input type="number" placeholder="Bilangan Pertama" class="bil-satu m-2 ps-2" name="angka1">
+            </td>
+            <td rowspan="4">
+              <input type="submit" class="equal-button" value="=" >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" class="mb-1 fs-6 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Addition" value="+" onclick="tambah()">
+             </input> 
+            </td>
+            <td>
+              <input type="button" class="mb-1 fs-6 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Subtraction" value="-" onclick="kurang()">
+              </input>
+            </td>
+            <td>
+              <input type="button" class="mb-1 fs-6 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Multiplication" value="x" onclick="kali()">
+              </input>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" class="mb-1 fs-6 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Division" value="/" onclick="bagi()">
+              </input>
+            </td>
+            <td>
+              <input type="button" class="mb-1 fs-6 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Powers of Numbers" value="^">
+              </input>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <input type="number" placeholder="Bilangan Kedua" class="bil-dua m-2 ps-2" name="angka2">
+            </td>
+          </tr>
+          
+        </table>
+
+      </form>
+
+      <section>
+        <h3 class="text-white mt-2">Result:</h3>
+        <input type="number" name="hasil">
+      </section>
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>   
+    
+    <script>
+      function tambah(){
+    var bilSatu=parseFloat(document.calculator.bilSatu.value);
+    var bilDua=parseFloat(document.calculator.bilDua.value);
+    var samaDengan= bilSatu+bilDua;
+    document.calculator.hasil.value=samaDengan;
+}
+
+function kurang(){
+    var bilSatu=parseFloat(document.calculator.bilSatu.value);
+    var bilDua=parseFloat(document.calculator.bilDua.value);
+    var samaDengan= bilSatu-bilDua;
+    document.calculator.hasil.value=samaDengan;
+}
+
+function kali(){
+    var bilSatu=parseFloat(document.calculator.bilSatu.value);
+    var bilDua=parseFloat(document.calculator.bilDua.value);
+    var samaDengan= bilSatu*bilDua;
+    document.calculator.hasil.value=samaDengan;
+}
+
+function bagi(){
+    var bilSatu=parseFloat(document.calculator.bilSatu.value);
+    var bilDua=parseFloat(document.calculator.bilDua.value);
+    var samaDengan= bilSatu/bilDua;
+    document.calculator.hasil.value=samaDengan;
+}
+    </script>
+  </body>
+</html>

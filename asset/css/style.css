@@ -1,0 +1,63 @@
+:root{
+    --orange: #FF8C00;
+    --navy: rgb(31, 31, 48);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body{
+    background-image: url(../photo/bg-mtlk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.calculator{
+    background-color: var(--navy);
+    padding: 40px;
+    opacity: 0.9;
+    height: 100vh;
+}
+
+.header{
+    margin-top: 10px;
+}
+
+.header h1{
+    font-size: 60px;
+}
+
+.bil-satu, .bil-dua{
+    background-color: rgb(234, 235, 244);
+}
+
+.operator{
+    margin: auto;
+}
+
+.operator-button{
+    border-radius: 10px;
+    width: 120px;
+    height: 100px;
+    
+}
+
+.operator-button:active{
+    background-color: var(--orange);
+}
+
+.bil-satu{
+    border-radius: 20px;
+}
+
+.bil-dua{
+    border-radius: 20px;
+}
+
+.hasil{
+    font-size: 100px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="asset/css/style.css">
+    </head>
+
+    <body>
+
+        <form name="calculator" class="calculator">
+            <table class="tabel operator">
+                <div class="header">
+                    <h1 class="text-center text-white mb-3">Calculator</h1>
+                </div>
+
+                <tr>
+                    
+                    <td>
+                        <input type="number" placeholder="Bilangan Pertama" class="bil-satu mb-2 ps-2 w-100 fs-2" name="inputsatu">
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>
+                        <input type="number" placeholder="Bilangan Kedua" class="bil-dua mb-4 ps-2 w-100 fs-2" name="inputdua">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <input type="button" class="mb-1 fs-4 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Addition" value="+" onclick="penjumlahan()"></input>
+                        <input type="button" class="mb-1 fs-4 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Subtraction" value="-" onclick="pengurangan()"></input>
+                        <input type="button" class="mb-1 fs-4 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Multiplication" value="x" onclick="perkalian()"></input>
+                        <input type="button" class="mb-1 fs-4 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Division" value="/" onclick="pembagian()"></input>
+                        <input type="button" class="mb-1 fs-4 fw-bolder text-center operator-button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Powers of Numbers" value="^" onclick="perpangkatan()"></input>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="hasil text-white mt-2 fs-1">Result:</p>
+                        <input type="number" name="hasil" class="ps-2 fs-1 w-100">
+                    </td>
+                </tr>
+                
+            </table>
+        </form>
+    </body>
+
+    <script src="asset/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>
